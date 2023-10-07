@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct PreviewHelpApp: App {
+    @State private var banana = Banana()
+    @State var favourite = Favourites()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(favourite)
+                .environment(banana)
         }
     }
 }
